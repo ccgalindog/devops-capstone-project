@@ -84,8 +84,7 @@ def read_account(customer_id):
     Read an Account
     This endpoint will read the information of an Account given the customer id
     """
-    app.logger.info("Request to read an Account")
-    check_content_type("application/json")
+    app.logger.info(f"Request to read an Account with id {customer_id}")
     account = Account().find(customer_id)
     
     if not account:
